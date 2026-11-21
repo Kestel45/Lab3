@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Εγγραφή – Τμήμα Πληροφορικής Πανεπιστημίου Πειραιώς</title>
+
+<style>
+body {
+    margin: 30px;
+    font-family: Arial;
+    font-size: 16px;
+    color: #1c2333;
+    background-color: #eef1f6;
+}
+
+h1 {
+    color: #1f3a6b;
+    font-size: 24px;
+}
+
+header p {
+    color: #55607a;
+}
+
+form {
+    width: 700px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #1f3a6b;
+}
+
+.note {
+    color: #55607a;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #cdd4e2;
+}
+
+legend {
+    color: #1f3a6b;
+    font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    padding: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #b9c1d3;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+.options label {
+    width: auto;
+}
+
+.full {
+    margin-top: 10px;
+}
+
+.full label {
+    width: auto;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 25px;
+    border: 1px solid #1f3a6b;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    color: white;
+    background-color: #1f3a6b;
+}
+
+input[type="reset"] {
+    color: #1f3a6b;
+    background-color: white;
+}
+
+.qr {
+    width: 180px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #1f3a6b;
+    text-align: center;
+}
+
+.qr img {
+    width: 100%;
+}
+
+.qr p {
+    color: #55607a;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Εγγραφή στον ιστότοπο του Τμήματος Πληροφορικής</h1>
+<p>Πανεπιστήμιο Πειραιώς</p>
+</header>
+
+<form action="#" method="post">
+
+<p class="note">Τα πεδία με αστερίσκο (*) είναι απαραίτητα.</p>
+
+<fieldset>
+<legend>Προσωπικά στοιχεία</legend>
+
+<span>Τίτλος:</span>
+<div class="options">
+<span>
+<input type="radio" id="title-student" name="title" value="student">
+<label for="title-student">Φοιτητής</label>
+</span>
+
+<span>
+<input type="radio" id="title-viewer" name="title" value="viewer">
+<label for="title-viewer">Θεατής</label>
+</span>
+</div>
+
+<label for="firstname">Όνομα:</label>
+<input type="text" id="firstname" name="firstname" size="25" maxlength="30" placeholder="π.χ. Γιώργος">
+<br>
+
+<label for="lastname">Επώνυμο:</label>
+<input type="text" id="lastname" name="lastname" size="25" maxlength="30" placeholder="π.χ. Παπαδόπουλος">
+<br>
+
+<label for="birthdate">Ημερομηνία γέννησης:</label>
+<input type="date" id="birthdate" name="birthdate" min="2008-01-01" max="2010-12-31">
+<br>
+
+<label for="country">Χώρα κατοικίας:</label>
+<select id="country" name="country">
+<option>Ελλάδα</option>
+<option>Τουρκία</option>
+<option>Ιταλία</option>
+<option>Αλβανία</option>
+<option>Βουλγαρία</option>
+</select>
+<br>
+
+<span>Οικογενειακή κατάσταση:</span>
+<div class="options">
+<span>
+<input type="radio" id="status-married" name="status" value="married">
+<label for="status-married">Έγγαμος</label>
+</span>
+
+<span>
+<input type="radio" id="status-single" name="status" value="single">
+<label for="status-single">Άγαμος</label>
+</span>
+</div>
+
+</fieldset>
+
+<fieldset>
+<legend>Στοιχεία επικοινωνίας</legend>
+
+<label for="address">Διεύθυνση:</label>
+<textarea id="address" name="address" rows="2" cols="30" required placeholder="π.χ. Καραολή και Δημητρίου 80"></textarea>
+<br>
+
+<label for="city">Πόλη:</label>
+<input type="text" id="city" name="city" size="10" maxlength="15" placeholder="π.χ. Πειραιάς">
+<br>
+
+<label for="region">Περιοχή/Περιφέρεια:</label>
+<input type="text" id="region" name="region" size="20" maxlength="30" placeholder="π.χ. Αττική">
+<br>
+
+<label for="zip">Ταχ. κώδικας:</label>
+<input type="text" id="zip" name="zip" size="6" maxlength="5" pattern="[0-9]{5}" placeholder="π.χ. 18534">
+<br>
+
+<label for="phone">Τηλέφωνο:</label>
+<input type="tel" id="phone" name="phone" size="14" maxlength="14" placeholder="π.χ. 2104142000">
+<br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" size="30" maxlength="50" placeholder="π.χ. onoma@example.gr">
+
+</fieldset>
+
+<fieldset>
+<legend>Δημιουργία κωδικού πρόσβασης</legend>
+
+<label for="username">Όνομα χρήστη:</label>
+<input type="text" id="username" name="username" size="15" minlength="4" maxlength="15" required placeholder="π.χ. giorgos2008">
+<br>
+
+<label for="password">Κωδικός πρόσβασης:</label>
+<input type="password" id="password" name="password" size="15" minlength="8" maxlength="20" required placeholder="τουλάχιστον 8 χαρακτήρες">
+<br>
+
+<div class="full">
+<input type="checkbox" id="terms" name="terms" required>
+<label for="terms">Έχω διαβάσει και αποδέχομαι τους Όρους &amp; Προϋποθέσεις χρήσης του ιστοτόπου.</label>
+</div>
+
+</fieldset>
+
+<div class="actions">
+<input type="submit" value="Αποστολή">
+<input type="reset" value="Ακύρωση">
+</div>
+
+</form>
+
+<aside class="qr">
+<img src="qr.png" alt="QR code της σελίδας">
+<p>Σαρώστε το QR code για να ανοίξετε τη σελίδα.</p>
+</aside>
+
+</body>
+</html>
